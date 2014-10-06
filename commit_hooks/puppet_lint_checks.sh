@@ -14,7 +14,7 @@ fi
 
 # De-lint puppet manifests
 echo -e "\x1B[0;36mChecking puppet style guide compliance for $module_path...\x1B[0m"
-puppet-lint --fail-on-warnings --with-filename --no-80chars-check $1 2>&1 > $error_msg
+puppet-lint --fail-on-warnings --with-filename --no-autoloader_layout-check --no-80chars-check $1 2>&1 > $error_msg
 RC=$?
 if [ $RC -ne 0 ]; then
     echo -en "\x1B[0;31m"
