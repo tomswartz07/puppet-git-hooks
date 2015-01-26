@@ -4,7 +4,7 @@ git_root=`git rev-parse --show-toplevel`
 failures=0
 RC=0
 
-subhook_root=$git_root/.git/hooks/commit_hooks
+subhook_root=$git_root/puppet-git-hooks/commit_hooks
 
 hook_dir="$(dirname $0)"
 hook_symlink="$(readlink $0)"
